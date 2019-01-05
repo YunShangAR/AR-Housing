@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="AR_Pic" size="1.000000 0.560764" />
+    <ImageTarget name="YunHouse" size="1.000000 1.414516" />
+    <ImageTarget name="5936163b87cdb_1024" size="10.000000 10.000000" />
+    <ImageTarget name="57318d6fde665_1024" size="10.000000 13.662109" />
+    <ImageTarget name="57314d842684c_1024" size="10.000000 12.175981" />
+    <ImageTarget name="BieShuLouPan" size="10.000000 14.145162" />
+  </Tracking>
+</QCARConfig>
