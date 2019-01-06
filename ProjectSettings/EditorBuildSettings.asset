@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_App/Scenes/SampleScene.unity
     guid: be924669d91c3ee4dbccb3d27fd0d8be
+  - enabled: 1
+    path: Assets/_App/Scenes/Roam/RoamHouseA.unity
+    guid: 79941180fed23764297416dde4e7602f
   m_configObjects: {}

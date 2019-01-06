@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HouseUI : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class HouseUI : MonoBehaviour
     public TMP_Text squareMeterText;
     public TMP_Text salsmanPhoneText;
     public TMP_Text salsmanEmailText;
+    public Button roamButton;
 
     public void Set(House house)
     {
@@ -24,5 +27,23 @@ public class HouseUI : MonoBehaviour
         squareMeterText.text = house.squareMeter.ToString("G");
         salsmanPhoneText.text = house.salesman?.phone ?? string.Empty;
         salsmanEmailText.text = house.salesman?.email ?? string.Empty;
+
+        bool canRoam = house.roamSceneIndex != -1;
+        roamButton.gameObject.SetActive(canRoam);
+        if (canRoam)
+        {
+            roamButton.onClick.RemoveAllListeners();
+            roamButton.onClick.AddListener(() =>
+            {
+                try
+                {
+                    SceneManager.LoadScene(house.roamSceneIndex);
+                }
+                catch
+                {
+                    Debug.LogError($"Roam scene index error [{house.name}]");
+                }
+            });
+        }
     }
 }

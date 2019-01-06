@@ -13,4 +13,9 @@ public class SimpleDebugger : MonoBehaviour
     {
         print(go);
     }
+
+    public void Log(Vector2 v)
+    {
+        print(v);
+    }
 }
